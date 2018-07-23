@@ -56,9 +56,13 @@ const RootQuery = new GraphQLObjectType({
                 const { status, id, fName, lName } = args;
                 const token = id ? id : `${fName}_${lName}`;
 
+                // if searching with fName_lName
+                // players with same name can be returned in an []
                 return axios.get(`${apiBase}/player/${token}`)
                     .then(({ data: { data }}) => {
-                        return Array.isArray(data) ? data[0] : data;
+                        const payload = Array.isArray(data) ? data[0] : data;;
+
+                        return {...payload, ...{ fName: payload.fname }}
                     });
             }
         },
