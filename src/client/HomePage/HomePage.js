@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { PlayerList } from './PlayerList';
+
 const HomePage = (props) => {
-  return 'Home Page Here';
+  return <PlayerList />
 };
 
 export { HomePage };
