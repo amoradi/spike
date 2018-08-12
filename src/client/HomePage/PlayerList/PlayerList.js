@@ -7,6 +7,8 @@ const renderPlayers = data => {
     return <li>Loading...</li>;
   }
 
+  if (!data.players) return null;
+  
   return data.players.map((player, idx) => {
     const { fName, lName, weight} = player;
 

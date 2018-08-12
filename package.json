@@ -34,6 +34,7 @@
     "nodemon": "*",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "radium": "^0.24.1",
     "react": "^16.4.0",
     "react-apollo": "^2.1.9",
     "react-dom": "16.4.0",
@@ -44,6 +45,7 @@
     "webpack-dev-middleware": "^1.9.0"
   },
   "devDependencies": {
+    "file-loader": "^1.1.11",
     "prettier": "1.14.0"
   }
 }
