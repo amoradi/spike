@@ -1,13 +1,17 @@
 import React from 'react';
+import Radium from 'radium';
 
 import { styles } from './styles';
 
-const Container = ({ children }) => {
+let Container = ({ children, isPoised }) => {
+  let computedStyles = isPoised ? [styles.base, styles.poised] : styles.base;
+
   return (
-    <div style={styles}>
+    <div style={computedStyles}>
       { children }
     </div>
   )
 };
 
+Container = Radium(Container);
 export { Container };

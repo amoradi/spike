@@ -14,7 +14,7 @@ const BaseLayout = ({ component: Component, ...rest }) => {
         return (
           <div className='PageContainer'>
             <TopNavigation />
-            <Container>
+            <Container isPoised>
               <Component {...matchProps} />
             </Container>
             <Footer />

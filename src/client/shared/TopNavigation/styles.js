@@ -8,8 +8,16 @@ const containerStyles = {
 const styles = {
   base: {
     backgroundColor: 'rgb(46, 49, 146)',
-    padding: '10px 0'
+    padding: '10px 0',
+    transition: '0.4s'
   },
+  fixed: {
+    position: 'fixed',
+    left: 0,
+    right: 0,
+    width: '100%'
+  },
+  shadowed: { boxShadow: '0 4px 2px -2px rgba(0,0,0,0.3)' },
   container: {
     display: 'flex',
     alignItems: 'center',

@@ -12,7 +12,7 @@ const TopNavigationLink = ({ text, to }) => {
 const TopNavigationLinkFirst = ({ to }) => {
   return (
     <RadiumizedLink style={[styles.base, styles.floatLeft]} to={to}>
-      <img src={Logo} height='45px' alt='Sporting Spy' style={styles.logo} /> Sporting Spy
+      <img src={Logo} alt='Sporting Spy' style={styles.logo} /> Sporting Spy
     </RadiumizedLink>
   );
 };
