@@ -15,7 +15,7 @@
 - consider adding Helmet for security measures
 
 ### project utils
-- prettier
+- prettier, todo: add pre-commit hook
 
 ### guidelines
 - container / component pattern in react
