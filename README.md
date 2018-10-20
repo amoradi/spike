@@ -1,7 +1,7 @@
 ## docs
 
 ### front end
-- react, client-side renderd
+- react, client-side rendered
 - react router (handles all routing)
 - CSS-in-JS with help from Radium (no css/scss/less here)
 - axios HTTP client
