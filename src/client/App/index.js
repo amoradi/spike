@@ -5,7 +5,7 @@ import { ApolloProvider, graphql } from "react-apollo";
 import { BrowserRouter } from "react-router-dom";
 import { StyleRoot } from 'radium';
 
-import { Routes } from './shared/Routes';
+import { Routes } from './Routes';
 
 const client = new ApolloClient({
   uri: "http://localhost:4000/graphql"

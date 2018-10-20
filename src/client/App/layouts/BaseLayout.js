@@ -1,10 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Route } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Container } from 'Container';
+import { Footer } from 'Footer';
+import { TopNavigation } from 'TopNavigation';
 
-import { Container } from '../Container';
-import { TopNavigation } from '../TopNavigation';
-import { Footer } from '../Footer';
 
 const BaseLayout = ({ component: Component, ...rest }) => {
   return (
@@ -12,13 +12,13 @@ const BaseLayout = ({ component: Component, ...rest }) => {
       {...rest}
       render={matchProps => {
         return (
-          <div className='PageContainer'>
+          <React.Fragment>
             <TopNavigation />
             <Container isPoised>
               <Component {...matchProps} />
             </Container>
             <Footer />
-          </div>
+          </React.Fragment>
         )
       }}
     />
@@ -30,3 +30,4 @@ BaseLayout.propTypes = {
 };
 
 export { BaseLayout };
+

@@ -1,8 +1,7 @@
 import React from 'react';
-
-import { Container } from '../Container';
-import { HOME, PLAYERS, GAMES, TEAMS, COMPARE } from '../Routes/paths';
+import { Container } from 'Container';
 import { styles } from './styles';
+
 
 const Footer = () => {
   return (
@@ -17,3 +16,4 @@ const Footer = () => {
 };
 
 export { Footer };
+

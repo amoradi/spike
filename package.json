@@ -2,12 +2,12 @@
   "name": "sportingspy",
   "version": "1.0.0",
   "description": "start",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
     "prettify": "prettier \"**/*.js\" --write",
     "build": "webpack --config webpack.config.js",
     "build-watch": "webpack --config webpack.config.js --watch",
-    "dev": "nodemon src/index.js --ignore client"
+    "dev": "nodemon src/app.js --ignore client"
   },
   "author": "",
   "license": "ISC",

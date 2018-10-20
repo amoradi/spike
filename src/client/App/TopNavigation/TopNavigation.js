@@ -1,12 +1,9 @@
-import React from 'react';
 import Radium from 'radium';
-import { Link } from 'react-router-dom';
-
-import { HOME, PLAYERS, GAMES, TEAMS, COMPARE } from '../Routes/paths';
-
+import React from 'react';
+import { COMPARE, GAMES, HOME, PLAYERS, TEAMS } from 'Routes/paths';
 import { styles } from './styles';
-
 import { TopNavigationLink, TopNavigationLinkFirst } from './TopNavigationLink';
+
 
 class TopNavigation extends React.Component {
   constructor(props) {
@@ -49,3 +46,4 @@ class TopNavigation extends React.Component {
 
 TopNavigation = Radium(TopNavigation);
 export { TopNavigation };
+

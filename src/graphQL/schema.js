@@ -8,61 +8,13 @@ const {
   GraphQLString,
   GraphQLList
 } = graphql;
-
 const playerMapper = require("./mappers");
 
-const OffensiveStats = new GraphQLObjectType({
-  name: "OffensiveStats",
-  fields: {
-    player: { type: GraphQLString },
-    game: { type: GraphQLInt },
-    year: { type: GraphQLInt },
-    pa: { type: GraphQLInt },
-    rec: { type: GraphQLInt },
-    fp: { type: GraphQLString }
-  }
-});
+// types
+const Player = require('./types/Player');
+const Team = require('./types/Player');
 
-const Player = new GraphQLObjectType({
-  name: "Player",
-  fields: {
-    player: { type: GraphQLString },
-    fName: { type: GraphQLString },
-    lName: { type: GraphQLString },
-    dob: { type: GraphQLString },
-    pos: { type: GraphQLString },
-    number: { type: GraphQLInt },
-    team: { type: GraphQLString },
-    height: { type: GraphQLInt },
-    weight: { type: GraphQLInt },
-    offensiveStats: {
-      type: new GraphQLList(OffensiveStats),
-      resolve(parentValue, args) {
-        return axios
-          .get(`${apiBase}/player/${parentValue.player}/offense`)
-          .then(({ data }) => {
-            return data.data;
-          });
-      }
-    }
-  }
-});
-
-const Team = new GraphQLObjectType({
-  name: "Team",
-  fields: {
-    name: { type: GraphQLString },
-    players: {
-      type: new GraphQLList(Player),
-      resolve(parentValue, args) {
-        return axios
-          .get(`${apiBase}/players/${parentValue.name}`)
-          .then(({ data }) => data.data);
-      }
-    }
-  }
-});
-
+// mega
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
@@ -116,6 +68,5 @@ const RootQuery = new GraphQLObjectType({
   }
 });
 
-module.exports = new GraphQLSchema({
-  query: RootQuery
+module.exports = new GraphQLSchema({ query: RootQuery
 });

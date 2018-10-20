@@ -1,9 +1,9 @@
-import React from 'react';
 import Radium from 'radium';
+import React from 'react';
 import { Link } from 'react-router-dom';
-
-import { styles } from './styles';
 import Logo from '../sporting_spy_logo.png';
+import { styles } from './styles';
+
 
 const RadiumizedLink = Radium(Link);
 const TopNavigationLink = ({ text, to }) => {

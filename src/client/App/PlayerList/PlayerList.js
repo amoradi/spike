@@ -1,5 +1,5 @@
-import React from "react";
 import gql from "graphql-tag";
+import React from "react";
 import { graphql } from "react-apollo";
 
 const renderPlayers = data => {
@@ -7,6 +7,8 @@ const renderPlayers = data => {
     return <li>Loading...</li>;
   }
 
+  if (!data.players) return null;
+  
   return data.players.map((player, idx) => {
     const { fName, lName, weight} = player;
 
@@ -31,4 +33,7 @@ const query = gql`
   }
 `;
 
-export default graphql(query)(PlayerList);
+const PlayerListConnected = graphql(query)(PlayerList);
+
+export { PlayerListConnected };
+
