@@ -11,6 +11,8 @@
 ### back end
 - node, express
 - graphQL, which hits a 3rd party api
+- forever is installed, needs wiring up (keeps app running in production after crashes)
+- consider adding Helmet for security measures
 
 ### project utils
 - prettier
